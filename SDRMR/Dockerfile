@@ -38,7 +38,7 @@ ENV GOPATH /go
 ENV PATH /go/bin:$PATH
 RUN mkdir -p ${GOPATH}/src ${GOPATH}/bin
 
-RUN go install github.com/bemasher/rtlamr@latest
+RUN go install github.com/bemasher/rtlamr@v0.9.3
 
 
 COPY run.sh /
