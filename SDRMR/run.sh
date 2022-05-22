@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo "configuring variables..."
+
 export LD_LIBRARY_PATH=/usr/local/lib64
 export LANG=C
 PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
@@ -129,6 +132,7 @@ if $de; then
 fi
 # Function, runs a rtlamr listen event
 function listener {
+  echo "listener starting"
   /go/bin/rtlamr -format json -msgtype=$AMR_MSGTYPE $x| while read line
   do
     postto
